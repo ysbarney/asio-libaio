@@ -88,6 +88,11 @@ public:
     }
   }
 
+  ASIO_DECL void destroy_aio_context() {
+    ::close(event_fd_);
+    ::io_destroy(aio_ctx_);
+  }
+
   //submit async write some.
   template<typename ConstBufferSequence>
   ASIO_DECL bool aio_io_submit_write(int descriptor, 
