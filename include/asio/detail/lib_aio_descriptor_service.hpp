@@ -34,6 +34,7 @@
 #include "asio/detail/memory.hpp"
 #include "asio/detail/noncopyable.hpp"
 #include "asio/posix/descriptor_base.hpp"
+#include "asio/detail/reactive_wait_op.hpp"
 #include "asio/detail/reactor.hpp"
 #include "asio/file_base.hpp"
 

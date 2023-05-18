@@ -73,6 +73,7 @@ void lib_aio_descriptor_service::destroy(
 
     asio::error_code ignored_ec;
     descriptor_ops::close(impl.descriptor_, impl.state_, ignored_ec);
+    destroy_aio_context();
   }
 }
 
